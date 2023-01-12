@@ -13,7 +13,7 @@ class EntranceViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .black
-        title = "NEWS"
+//        title = "NEWS"
     }
     
     @IBAction func startButtonClicked(_ sender: Any) {

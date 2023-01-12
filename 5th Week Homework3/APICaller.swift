@@ -15,7 +15,7 @@ final class APICaller {
     private struct Constants {
         static let apiKey = "20ae9fc404a44ba48b546fe0888c55d6"
         static let baseURL = "https://newsapi.org/v2/top-headlines?"
-        static let country = "country=tr"
+        static let country = "country=us"
     }
     
     private init() {}

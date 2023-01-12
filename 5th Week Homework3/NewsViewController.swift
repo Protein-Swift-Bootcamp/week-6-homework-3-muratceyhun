@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 import SafariServices
 
 class NewsViewController: UIViewController {
@@ -44,7 +46,14 @@ class NewsViewController: UIViewController {
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
         newsCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
         fetchNews()
+        
+//        newsCollectionView.contentInset = UIEdgeInsets(top: 12, left: 4, bottom: 12, right: 4)
+        
+//        if let layout = newsCollectionView?.collectionViewLayout as? PinterestLayout {
+//            layout.delegate = self
+//        }
     }
     
     
@@ -75,9 +84,11 @@ extension NewsViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        collectionView.deselectItem(at: indexPath, animated: true)
         let articles = articles[indexPath.row]
+        
+        
         
         guard let url = URL(string: articles.url ?? "") else { return }
         
@@ -88,8 +99,36 @@ extension NewsViewController: UICollectionViewDataSource {
     
 }
 
+//extension NewsViewController : PinterestLayoutDelegate {
+//    func collectionView(collectionView: UICollectionView, heightForPhotoAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
+//
+//        var article = articles[indexPath.item]
+//        if let photo = article.urlToImage {
+//
+//            let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+//
+//            let rect = AVMakeRect(aspectRatio: <#T##CGSize#>, insideRect: <#T##CGRect#>)
+//
+//            return rect.size.height
+//
+//        }
+//
+//        return 0
+//    }
+//
+//    func collectionView(collectionView: UICollectionView, heightForCaptionAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
+//        return 0.0
+//
+//
+//    }
+//}
+//
+//
+//
+//
+//
 extension NewsViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 300)
+        return CGSize(width: 209, height: 300)
     }
 }

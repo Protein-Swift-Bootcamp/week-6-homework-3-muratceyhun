@@ -15,6 +15,7 @@
 		437BFE60296A17AC00C323A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437BFE5E296A17AC00C323A3 /* LaunchScreen.storyboard */; };
 		4381E85E296F0EC000A4B026 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381E85D296F0EC000A4B026 /* NewsCollectionViewCell.swift */; };
 		4387B248296E1E3900FB5637 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4387B247296E1E3900FB5637 /* EntranceViewController.swift */; };
+		43AA08922970641B00C75512 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA08912970641B00C75512 /* PinterestLayout.swift */; };
 		43EE4F85296E135D002D6394 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE4F84296E135D002D6394 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		437BFE61296A17AC00C323A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4381E85D296F0EC000A4B026 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4387B247296E1E3900FB5637 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
+		43AA08912970641B00C75512 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		43EE4F84296E135D002D6394 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				437BFE57296A17AC00C323A3 /* NewsViewController.swift */,
 				4381E85D296F0EC000A4B026 /* NewsCollectionViewCell.swift */,
 				43EE4F84296E135D002D6394 /* APICaller.swift */,
+				43AA08912970641B00C75512 /* PinterestLayout.swift */,
 				437BFE59296A17AC00C323A3 /* Main.storyboard */,
 				437BFE5C296A17AC00C323A3 /* Assets.xcassets */,
 				437BFE5E296A17AC00C323A3 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 				437BFE58296A17AC00C323A3 /* NewsViewController.swift in Sources */,
 				4381E85E296F0EC000A4B026 /* NewsCollectionViewCell.swift in Sources */,
 				437BFE54296A17AC00C323A3 /* AppDelegate.swift in Sources */,
+				43AA08922970641B00C75512 /* PinterestLayout.swift in Sources */,
 				437BFE56296A17AC00C323A3 /* SceneDelegate.swift in Sources */,
 				43EE4F85296E135D002D6394 /* APICaller.swift in Sources */,
 				4387B248296E1E3900FB5637 /* EntranceViewController.swift in Sources */,
