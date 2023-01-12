@@ -20,7 +20,7 @@ final class APICaller {
     
     private init() {}
     
-    public func getNews(completion: @escaping (Result<[String],Error>) -> Void) {
+    public func getNews(completion: @escaping (Result<[Article],Error>) -> Void) {
         guard let url = URL(string: Constants.baseURL + Constants.country + "&apiKey=" + Constants.apiKey) else {return}
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
@@ -30,6 +30,7 @@ final class APICaller {
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
                     
                     print("********* \(result.articles.count)")
+                    completion(.success(result.articles))
                 }
                 
                 catch {
@@ -51,14 +52,15 @@ struct APIResponse: Codable {
 }
 
 struct Article: Codable {
-    let title: String
-    let description: String
-    let url: String
-    let urlToImage: String
-    let publishedAt: String
+    let author: String?
+    let title: String?
+    let description: String?
+    let url: String?
+    let urlToImage: String?
+    let publishedAt: String?
     let source: Source
 }
 
 struct Source: Codable {
-    let name: String
+    let name: String?
 }
